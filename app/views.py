@@ -43,4 +43,4 @@ def index():
     if user.answer_id is None:
         return render_template('index.html', question=True, form=form)
 
-    return render_template('index.html', results=True, answer=user.answer_id)
+    return render_template('index.html', results=True, answer=user.answer.name)
