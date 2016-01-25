@@ -10,10 +10,6 @@ class User(db.Model):
     # E.g. if backref=answer, answer name can be accessed using user.answer.name
     answer_id = db.Column(db.Integer, db.ForeignKey('answer.id'))
 
-    def has_user_answered(self):
-        if self.answer_id is None:
-            return False
-        return True
 
 class Answer(db.Model):
     # Define table columns
